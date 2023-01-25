@@ -16,7 +16,7 @@ option = st.selectbox(
 option2 = int(option)
 
 st.write('You selected:', option)
-
+st.dataframe(money)
 
 
 money = money[:] [money['A_YEAR']== option2]
