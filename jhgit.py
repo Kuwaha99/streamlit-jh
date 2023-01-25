@@ -15,6 +15,8 @@ option = st.selectbox(
 
 option2 = int(option)
 
+st.title('This is a title')
+st.title(' JH money Correlation :blue[colors] and :money_with_wings:')
 st.write('You selected:', option)
 
 
