@@ -15,8 +15,7 @@ option = st.selectbox(
 
 option2 = int(option)
 
-st.title('This is a title')
-st.title(' JH :red[money] Correlation  and :money_with_wings:')
+st.title(' JH :red[money]:money_with_wings: Correlation -House :house_with_garden:')
 st.write('You selected:', option)
 
 
