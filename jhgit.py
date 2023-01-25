@@ -17,8 +17,6 @@ option2 = int(option)
 
 st.write('You selected:', option)
 st.dataframe(money)
-st.title(body, anchor=None)
-
 
 money = money[:] [money['A_YEAR']== option2]
 
