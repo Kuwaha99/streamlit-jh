@@ -17,7 +17,7 @@ option2 = int(option)
 
 st.title(' JH :red[money]:money_with_wings: Correlation -House :house_with_garden:')
 st.write('You selected:', option)
-
+st.sidebar.success("Select a demo above.")
 
 money = money[:] [money['A_YEAR']== option2]
 
