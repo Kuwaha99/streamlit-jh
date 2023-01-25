@@ -16,10 +16,10 @@ option = st.selectbox(
 option2 = int(option)
 
 st.write('You selected:', option)
-st.dataframe(money)
+
 
 money = money[:] [money['A_YEAR']== option2]
-
+st.dataframe(money)
 fig, ax = plt.subplots(2,2, figsize=(12,8))
 
 plt.subplot(221)
