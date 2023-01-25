@@ -44,6 +44,7 @@ plt.subplot(224)
 plt.plot(  list( money['A_MONTH'] ), list( money['HOUSE_PRICE'] ), color='yellow' , marker='o'     ) 
 plt.xticks(tuple(money['A_MONTH']) )
 plt.title('House Price')
-st.dataframe(money)
+
 
 st.pyplot(fig)
+st.dataframe(money)
