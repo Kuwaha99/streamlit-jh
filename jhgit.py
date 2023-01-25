@@ -16,12 +16,12 @@ option = st.selectbox(
 option2 = int(option)
 
 st.title('This is a title')
-st.title(' JH money Correlation :blue[colors] and :money_with_wings:')
+st.title(' JH :red[money] Correlation  and :money_with_wings:')
 st.write('You selected:', option)
 
 
 money = money[:] [money['A_YEAR']== option2]
-st.dataframe(money)
+
 fig, ax = plt.subplots(2,2, figsize=(12,8))
 
 plt.subplot(221)
@@ -44,5 +44,6 @@ plt.subplot(224)
 plt.plot(  list( money['A_MONTH'] ), list( money['HOUSE_PRICE'] ), color='yellow' , marker='o'     ) 
 plt.xticks(tuple(money['A_MONTH']) )
 plt.title('House Price')
+st.dataframe(money)
 
 st.pyplot(fig)
