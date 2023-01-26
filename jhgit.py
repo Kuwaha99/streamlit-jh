@@ -6,14 +6,14 @@ import numpy as np
 #money = pd.read_csv("money_data7.csv")
 
 #st.sidebar.success("Select a demo above.")
-
+st.title('JH :red[money] :money_with_wings: & House :house_with_garden: :blue[Corr]')
 def  plotting_demo():
     money = pd.read_csv("money_data7.csv")
     option = st.selectbox(
         'How would you like to choice year ?',
         ('2020', '2021', '2022'))
 
-    st.title('JH :red[money] :money_with_wings: House :house_with_garden: :blue[Corr]')
+   
     option2 = int(option)
 
     st.write('You selected:', option)
