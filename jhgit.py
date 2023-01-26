@@ -41,10 +41,11 @@ def  plotting_demo():
     plt.plot(  list( money['A_MONTH'] ), list( money['HOUSE_PRICE'] ), color='yellow' , marker='o'     ) 
     plt.xticks(tuple(money['A_MONTH']) )
     plt.title('House Price')
-
+    
+    st.title('JH :red[money] :money_with_wings: House :house_with_garden: :blue[Corr]')
     st.pyplot(fig)
     st.dataframe(money)
-    st.title('JH :red[money] :money_with_wings: House :house_with_garden: :blue[Corr] ')
+   
 
 with st.form(key ='Form1'):
     with st.sidebar:
