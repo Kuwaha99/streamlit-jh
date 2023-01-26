@@ -13,6 +13,7 @@ def  plotting_demo():
         'How would you like to choice year ?',
         ('2020', '2021', '2022'))
 
+    st.title('JH :red[money] :money_with_wings: House :house_with_garden: :blue[Corr]')
     option2 = int(option)
 
     st.write('You selected:', option)
@@ -42,7 +43,7 @@ def  plotting_demo():
     plt.xticks(tuple(money['A_MONTH']) )
     plt.title('House Price')
     
-    st.title('JH :red[money] :money_with_wings: House :house_with_garden: :blue[Corr]')
+   
     st.pyplot(fig)
     st.dataframe(money)
    
