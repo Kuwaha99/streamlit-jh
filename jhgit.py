@@ -55,4 +55,6 @@ with st.form(key ='Form1'):
         
         
 if select_language =="line graph":        
-    plotting_demo()      
+    plotting_demo()
+elif select_language =="bar graph":
+    plotting_demo()
