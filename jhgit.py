@@ -2,22 +2,20 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-
-
-money = pd.read_csv('money_data7.csv')
-
-
 import streamlit as st
 
-option = st.selectbox(
-    'How would you like to choice year ?',
-    ('2020', '2021', '2022'))
+def plotting_demo():
+    money = pd.read_csv('money_data7.csv')
+    option = st.selectbox(
+      'How would you like to choice year ?',
+     ('2020', '2021', '2022'))
 
+    
 option2 = int(option)
 
 st.title(' JH :red[money]:money_with_wings: Correlation -House :house_with_garden:')
 st.write('You selected:', option)
-st.sidebar.success("Select a demo above.")
+# st.sidebar.success("Select a demo above.")
 
 money = money[:] [money['A_YEAR']== option2]
 
@@ -47,3 +45,11 @@ plt.title('House Price')
 
 st.pyplot(fig)
 st.dataframe(money)
+
+with st.form(key ='Form1'):
+    with st.sidebar:
+        
+        select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie'))
+
+if select_language =='line':        
+    plotting_demo()
