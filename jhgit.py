@@ -44,6 +44,7 @@ def  plotting_demo():
 
     st.pyplot(fig)
     st.dataframe(money)
+    st.title('JH :red[money] :money_with_wings: House :house_with_garden: :blue[Corr] ')
 
 with st.form(key ='Form1'):
     with st.sidebar:
