@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-uploaded_file = st.file_uploader("Choose a file")
-money=pd.read_csv(uploaded_file)
+
 
 #money = pd.read_csv("money_data7.csv")
 
@@ -13,6 +12,9 @@ money=pd.read_csv(uploaded_file)
 st.title('JH :red[money] :money_with_wings: & House :house_with_garden: :blue[Corr]')
 
 def  plotting_demo():
+    uploaded_file = st.file_uploader("Choose a file")
+    money=pd.read_csv(uploaded_file)
+    
     money = pd.read_csv("money_data7.csv")
     option = st.selectbox(
         'How would you like to choice year ?',
