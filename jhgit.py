@@ -59,8 +59,9 @@ with st.form(key ='Form1'):
         select_language = st.sidebar.radio('What do you want :red[graph] ?', ("line graph","bar graph","pie graph","corr graph","word cloud","box graph" ))
         
         
-if select_language =="line graph":        
+if select_language =="line graph":
+   
     try:
-        plotting_demo()
-    except:
-        pass
+          plotting_demo()  
+    except:      
+          pass
