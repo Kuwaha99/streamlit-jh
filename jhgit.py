@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-uploaded_file = st.file_uploader("Choose a file")
+    uploaded_file = st.file_uploader("Choose a file")
 
     money=pd.read_csv(uploaded_file)
 
