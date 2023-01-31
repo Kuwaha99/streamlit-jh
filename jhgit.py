@@ -55,23 +55,12 @@ def  plotting_demo():
     st.dataframe(money)
    
 
-with st.form(key ='Form1'):
-    with st.sidebar:
+def bar_chart():
+    
         
-        select_language = st.sidebar.radio('What do you want :red[graph] ?', ("line graph","bar graph","pie graph","corr graph","word cloud","box graph" ))
-        
-        
-if select_language =="line graph":
-   
-    try:
-          plotting_demo()  
-    except:      
-          pass
-        
-        
-url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
+    url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
 
-years = ['2015', '2016','2017', '2018', '2019', '2020', '2021', '2022' ]
+    years = ['2015', '2016','2017', '2018', '2019', '2020', '2021', '2022' ]
 
 df = pd.DataFrame([]) 
 for    i    in     years:
@@ -99,19 +88,20 @@ for    i    in     years:
     plt.title( "year korea baseball winrate data", position=(0.5,1.1))
     st.pyplot(fig)
     st.dataframe(df7)
+
     
-with st.form(key ='Form2'):
+with st.form(key ='Form1'):
     with st.sidebar:
         
-        select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie'))
+        select_language = st.sidebar.radio('What do you want :red[graph] ?', ("line graph","bar graph","pie graph","corr graph","word cloud","box graph" ))
         
         
-if select_language =='bar graph':           
+if select_language =="line graph":
+   
     try:
           plotting_demo()  
     except:      
           pass
-
-        
+            
 elif select_language =='bar':
     bar_chart()
