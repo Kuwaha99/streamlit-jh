@@ -68,38 +68,36 @@ def bar_chart():
         df1 = pd.read_html( url + i  )[0]
         df1['년도'] =  i 
         df = pd.concat([df, df1], axis=0)
-    
- 
         
-        baseball = df    
-        baseball.팀.replace({'두산':'Dusan','삼성':'SS','키움':'KU','한화': 'HH','롯데':'Lotte','넥센':'NecSen'}, inplace=True)
-        
-        option = st.selectbox(
-        'How would you like to choice year ?',
-        ('2015', '2016','2017', '2018', '2019', '2020', '2021', '2022'))
+    baseball = df    
+    baseball.팀.replace({'두산':'Dusan','삼성':'SS','키움':'KU','한화': 'HH','롯데':'Lotte','넥센':'NecSen'}, inplace=True)
 
-        option2 = option
+    option = st.selectbox(
+    'How would you like to choice year ?',
+    ('2015', '2016','2017', '2018', '2019', '2020', '2021', '2022'))
 
-        st.write('You selected:', option)
-        
-        df7  =  baseball[:][baseball.년도==option2 ]
-        
-        x = df7.팀
-        y = df7.승률
-        
-      
-    
-        fig, ax = plt.subplots(figsize=(12,8))
+    option2 = option
 
-        colors = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7' ,'C8', 'C9', 'C10' ]
-        plt.bar(  x,  y,  color= colors ) 
+    st.write('You selected:', option)
 
-        for   num ,   v    in   enumerate( y ):
-            plt.text (  num -0.4  ,   v + 0.01 ,  v   )
+    df7  =  baseball[:][baseball.년도==option2 ]
 
-       
-        st.pyplot(fig)
-        st.dataframe(df7)
+    x = df7.팀
+    y = df7.승률
+
+
+
+    fig, ax = plt.subplots(figsize=(12,8))
+
+    colors = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7' ,'C8', 'C9', 'C10' ]
+    plt.bar(  x,  y,  color= colors ) 
+
+    for   num ,   v    in   enumerate( y ):
+        plt.text (  num -0.4  ,   v + 0.01 ,  v   )
+
+
+    st.pyplot(fig)
+    st.dataframe(df7)
 
     
 with st.form(key ='Form1'):
