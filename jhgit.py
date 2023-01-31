@@ -62,12 +62,12 @@ def bar_chart():
 
     years = ['2015', '2016','2017', '2018', '2019', '2020', '2021', '2022' ]
 
-df = pd.DataFrame([]) 
-for    i    in     years:
+    df = pd.DataFrame([]) 
+    for    i    in     years:
     
-    df1 = pd.read_html( url + i  )[0]
-    df1['년도'] =  i 
-    df = pd.concat([df, df1], axis=0)
+        df1 = pd.read_html( url + i  )[0]
+        df1['년도'] =  i 
+        df = pd.concat([df, df1], axis=0)
     
  
         
