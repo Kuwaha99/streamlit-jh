@@ -55,7 +55,10 @@ def  plotting_demo():
     st.dataframe(money)
    
 
-with st.form(key ='Form1'):
+with st.
+
+
+(key ='Form1'):
     with st.sidebar:
         
         select_language = st.sidebar.radio('What do you want :red[graph] ?', ("line graph","bar graph","pie graph","corr graph","word cloud","box graph" ))
@@ -100,7 +103,7 @@ for    i    in     years:
     st.pyplot(fig)
     st.dataframe(df7)
     
-    with st.form(key ='Form1'):
+with st.form(key ='Form1'):
     with st.sidebar:
         
         select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie'))
