@@ -84,7 +84,7 @@ baseball.팀.replace({'두산':'Dusan','삼성':'SS','키움':'KU','한화': 'HH
 
 
 
-    df7  =  baseball[:] [ baseball.년도==option2 ]
+    df7  =  baseball[:][baseball.년도==option2 ]
     x = df7.팀
     y = df7.승률
     
