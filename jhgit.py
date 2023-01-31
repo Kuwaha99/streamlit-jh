@@ -76,6 +76,13 @@ def bar_chart():
         df7  =  baseball[:][baseball.년도==option2 ]
         x = df7.팀
         y = df7.승률
+        option = st.selectbox(
+        'How would you like to choice year ?',
+        ('2015', '2016','2017', '2018', '2019', '2020', '2021', '2022'))
+
+        option2 = option
+
+        st.write('You selected:', option)
     
         fig, ax = plt.subplots(figsize=(12,8))
 
