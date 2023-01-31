@@ -99,3 +99,19 @@ baseball.팀.replace({'두산':'Dusan','삼성':'SS','키움':'KU','한화': 'HH
     plt.title( "year korea baseball winrate data", position=(0.5,1.1))
     st.pyplot(fig)
     st.dataframe(df7)
+    
+    with st.form(key ='Form1'):
+    with st.sidebar:
+        
+        select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie'))
+        
+        
+if select_language =='bar graph':           
+    try:
+          plotting_demo()  
+    except:      
+          pass
+
+        
+elif select_language =='bar':
+    bar_chart()
