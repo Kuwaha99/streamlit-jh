@@ -97,17 +97,15 @@ with st.form(key ='Form1'):
         
         
     if select_language =="line graph":
-        
-   
-        try:
+       try:
         plotting_demo()  
-      except:
-        pass
+       except:
+            pass
             
     elif select_language =='bar graph':
         try:
             bar_chart()  
-      except:
-        pass
+        except:
+            pass
         
         
