@@ -74,16 +74,16 @@ url = "https://sports.news.naver.com/kbaseball/record/index?category=kbo&year="
 years = ['2015', '2016','2017', '2018', '2019', '2020', '2021', '2022' ]
 
 df = pd.DataFrame([]) 
-for    i    in     years: 
-  df1 = pd.read_html( url + i  )[0]
-  df1['년도'] =  i 
-  df = pd.concat([df, df1], axis=0)
+for    i    in     years:
+    
+    df1 = pd.read_html( url + i  )[0]
+    df1['년도'] =  i 
+    df = pd.concat([df, df1], axis=0)
+    
+ 
         
-baseball = df    
-baseball.팀.replace({'두산':'Dusan','삼성':'SS','키움':'KU','한화': 'HH','롯데':'Lotte','넥센':'NecSen'}, inplace=True)
-
-
-
+    baseball = df    
+    baseball.팀.replace({'두산':'Dusan','삼성':'SS','키움':'KU','한화': 'HH','롯데':'Lotte','넥센':'NecSen'}, inplace=True)
     df7  =  baseball[:][baseball.년도==option2 ]
     x = df7.팀
     y = df7.승률
