@@ -13,7 +13,7 @@ st.title('JH :red[money] :money_with_wings: & House :house_with_garden: :blue[Co
 
 def  plotting_demo():
    # uploaded_file = st.file_uploader("Choose a file")
-    money=pd.read_csv(uploaded_file)
+   # money=pd.read_csv(uploaded_file)
     
     money = pd.read_csv("money_data7.csv")
     option = st.selectbox(
