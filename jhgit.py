@@ -8,7 +8,7 @@ import numpy as np
 
 money = pd.read_csv("money_data7.csv")
 
-st.sidebar.success("Select a demo above.")
+#st.sidebar.success("Select a demo above.")
 st.title('JH :red[money] :money_with_wings: & House :house_with_garden: :blue[Corr]')
 
 def  plotting_demo():
