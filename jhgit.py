@@ -8,7 +8,7 @@ import numpy as np
 
 money = pd.read_csv("money_data7.csv")
 
-#st.sidebar.success("Select a demo above.")
+st.sidebar.success("Select a demo above.")
 st.title('JH :red[money] :money_with_wings: & House :house_with_garden: :blue[Corr]')
 
 def  plotting_demo():
@@ -103,15 +103,15 @@ def bar_chart():
 with st.form(key ='Form1'):
     with st.sidebar:
               
-        select_language = st.sidebar.radio('데이터 :b[분석] :red[결과]', ('금리와 집값 빠르게 파악하기', '야구 순위와 승률 빠르게 파악하기', '다른 데이터 분석'))
+        select_language = st.sidebar.radio('데이터 :b[분석] :red[결과]', ('금리와 집값 분석', '야구 순위와 승률 파악하기', '기타 데이터 분석'))
         
-if select_language =='금리와 집값 빠르게 파악하기':
+if select_language =='금리와 집값 분석':
    try:
     plotting_demo()  
    except:
         pass
 
-elif select_language =='야구 순위와 승률 빠르게 파악하기':
+elif select_language =='야구 순위와 승률 파악하기':
     bar_chart()
 
 
