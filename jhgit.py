@@ -89,11 +89,11 @@ with st.form(key ='Form1'):
 if select_language =='금리와 집값':
    tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
    with tab1:
-      tab1.subheader("A tab with a chart")
+      tab1.subheader("금리와 집값 chart")
       plotting_demo()
         
    with tab2:
-      tab2.subheader("A tab with the data")
+      tab2.subheader("금리와 집값 data")
       st.dataframe(aa)
    
 
