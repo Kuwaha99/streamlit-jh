@@ -69,6 +69,8 @@ def bar_chart():
     option2 = option
     st.write('You selected:', option)
     df7  =  baseball[:][baseball.년도==option2 ]
+    global  aa
+    aa = money      
     x = df7.팀
     y = df7.승률
     fig, ax = plt.subplots(figsize=(12,8))
@@ -77,7 +79,7 @@ def bar_chart():
     for   num ,   v    in   enumerate( y ):
         plt.text (  num -0.4  ,   v + 0.01 ,  v   )
     st.pyplot(fig)
-    st.dataframe(df7)
+    #st.dataframe(df7)
 
 with st.form(key ='Form1'):
     with st.sidebar:
