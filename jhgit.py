@@ -98,4 +98,12 @@ if select_language =='금리와 집값':
    
 
 elif select_language =='야구 순위와 승률':
-    bar_chart()
+   tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
+   with tab1:
+      tab1.subheader("야구 순위와 승률 chart")
+      bar_chart()
+        
+   with tab2:
+      tab2.subheader("야구  data")
+      st.dataframe(aa)    
+      
