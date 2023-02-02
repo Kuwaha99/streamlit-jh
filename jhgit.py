@@ -70,7 +70,7 @@ def bar_chart():
     st.write('You selected:', option)
     df7  =  baseball[:][baseball.년도==option2 ]
     global  aa
-    aa = money      
+    aa = df7      
     x = df7.팀
     y = df7.승률
     fig, ax = plt.subplots(figsize=(12,8))
